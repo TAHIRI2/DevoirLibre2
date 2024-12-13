@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DB11</groupId>
+  <artifactId>DB1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>DB1</name>
+  
+  <properties>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Assurez-vous que la version correspond à votre JDK -->
+        <maven.compiler.target>17</maven.compiler.target>
+        <javafx.version>20</javafx.version> <!-- Version JavaFX actuelle -->
+    </properties>
+
+    <dependencies>
+        <!-- Dépendances JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin Maven pour exécuter les applications JavaFX -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>View.AjouterMembreUI</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+  
+</project>
